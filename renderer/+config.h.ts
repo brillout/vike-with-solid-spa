@@ -6,7 +6,11 @@ export default {
   meta: {
     Page: {
       // Our pages are rendered as SPA, we therefore load our Page component only on the client-side
-      env: 'client-only'
+      env: {
+        client: true,
+        server: false,
+        config: false
+      }
     }
   }
 } satisfies Config
